@@ -1,0 +1,4105 @@
+{
+  "meta": {
+    "projectName": "k2krishikutumb",
+    "version": "0.0.0",
+    "description": "",
+    "generatedAt": "2026-03-12T05:41:07.562Z",
+    "root": "C:\\Users\\ASUS\\Desktop\\K2KrishiKutumb",
+    "totalFiles": 47,
+    "totalLOC": 6425,
+    "totalFunctions": 138,
+    "totalComponents": 48,
+    "totalIssues": {
+      "consoleLogs": 0,
+      "inlineStyles": 28,
+      "todos": 0
+    }
+  },
+  "packageInfo": {
+    "name": "k2krishikutumb",
+    "version": "0.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "lint": "eslint .",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.1",
+      "@mui/material": "^7.3.8",
+      "@tailwindcss/postcss": "^4.2.1",
+      "axios": "^1.13.6",
+      "firebase": "^12.10.0",
+      "lucide-react": "^0.576.0",
+      "react": "^19.2.0",
+      "react-dom": "^19.2.0",
+      "react-router-dom": "^7.13.1",
+      "recharts": "^3.7.0",
+      "zustand": "^5.0.11"
+    },
+    "devDependencies": {
+      "@eslint/js": "^9.39.1",
+      "@types/react": "^19.2.7",
+      "@types/react-dom": "^19.2.3",
+      "@vitejs/plugin-react": "^5.1.1",
+      "autoprefixer": "^10.4.27",
+      "eslint": "^9.39.1",
+      "eslint-plugin-react-hooks": "^7.0.1",
+      "eslint-plugin-react-refresh": "^0.4.24",
+      "globals": "^16.5.0",
+      "postcss": "^8.5.6",
+      "tailwindcss": "^4.2.1",
+      "vite": "^7.3.1"
+    }
+  },
+  "allNpmImportsAcrossFiles": [
+    "@eslint/js",
+    "@vitejs/plugin-react",
+    "axios",
+    "eslint-plugin-react-hooks",
+    "eslint-plugin-react-refresh",
+    "eslint/config",
+    "firebase/app",
+    "firebase/auth",
+    "firebase/firestore",
+    "firebase/messaging",
+    "firebase/storage",
+    "globals",
+    "lucide-react",
+    "path",
+    "react",
+    "react-dom/client",
+    "react-router-dom",
+    "vite",
+    "zustand",
+    "zustand/middleware"
+  ],
+  "folderTree": [
+    "📁 K2KrishiKutumb/",
+    "├── 📁 .vscode",
+    "│   └── 📋 settings.json",
+    "├── 📁 public",
+    "│   └── 🖼️  vite.svg",
+    "├── 📁 src",
+    "│   ├── 📁 assets",
+    "│   │   └── 🖼️  react.svg",
+    "│   ├── 📁 components",
+    "│   │   ├── 📁 Common",
+    "│   │   │   └── ⚛️  Header.jsx",
+    "│   │   └── 📁 Protected",
+    "│   │       └── ⚛️  ProtectedRoute.jsx",
+    "│   ├── 📁 config",
+    "│   │   ├── 📜 constants.js",
+    "│   │   └── 📜 firebase.config.js",
+    "│   ├── 📁 context",
+    "│   │   ├── ⚛️  AuthContext.jsx",
+    "│   │   └── ⚛️  FPOContext.jsx",
+    "│   ├── 📁 hooks",
+    "│   │   ├── 📜 useApi.js",
+    "│   │   ├── 📜 useAuth.js",
+    "│   │   └── 📜 useRoles.js",
+    "│   ├── 📁 pages",
+    "│   │   ├── 📁 Auth",
+    "│   │   │   ├── ⚛️  Login.jsx",
+    "│   │   │   ├── ⚛️  OTPValidation.jsx",
+    "│   │   │   └── ⚛️  Register.jsx",
+    "│   │   ├── 📁 Dashboard",
+    "│   │   │   ├── ⚛️  AccountantDashboard.jsx",
+    "│   │   │   ├── ⚛️  CEODashboard.jsx",
+    "│   │   │   ├── ⚛️  DirectorDashboard.jsx",
+    "│   │   │   ├── ⚛️  MainDashboard.jsx",
+    "│   │   │   ├── ⚛️  MemberDashboard.jsx",
+    "│   │   │   └── ⚛️  PromoterDashboard.jsx",
+    "│   │   ├── 📁 DashboardSubsections",
+    "│   │   │   ├── 📁 Accountant",
+    "│   │   │   ├── 📁 CEO",
+    "│   │   │   ├── 📁 Director",
+    "│   │   │   ├── 📁 Member",
+    "│   │   │   │   ├── ⚛️  CapacityHub.jsx",
+    "│   │   │   │   ├── ⚛️  Dashboard.jsx",
+    "│   │   │   │   ├── ⚛️  IssueBox.jsx",
+    "│   │   │   │   ├── ⚛️  Member.jsx",
+    "│   │   │   │   ├── ⚛️  Produce.jsx",
+    "│   │   │   │   ├── ⚛️  Services.jsx",
+    "│   │   │   │   └── ⚛️  Store.jsx",
+    "│   │   │   ├── 📁 Promoter",
+    "│   │   │   └── ⚛️  Sidebar.jsx",
+    "│   │   └── 📁 Units",
+    "│   │       ├── ⚛️  AllFPO.jsx",
+    "│   │       ├── ⚛️  CreateFPOModal.jsx",
+    "│   │       ├── ⚛️  MyFPO.jsx",
+    "│   │       └── ⚛️  Units.jsx",
+    "│   ├── 📁 routes",
+    "│   │   ├── ⚛️  index.jsx",
+    "│   │   └── 📜 routeConfig.js",
+    "│   ├── 📁 services",
+    "│   │   ├── 📁 api",
+    "│   │   │   ├── 📁 Entry",
+    "│   │   │   │   └── ⚛️  EntryLoader.jsx",
+    "│   │   │   ├── 📜 apiClient.js",
+    "│   │   │   ├── 📜 authApi.js",
+    "│   │   │   └── 📜 endpoints.js",
+    "│   │   ├── 📁 firebase",
+    "│   │   │   └── 📜 authService.js",
+    "│   │   └── 📁 utils",
+    "│   │       └── 📜 errorHandler.js",
+    "│   ├── 📁 store",
+    "│   │   └── 📜 authStore.js",
+    "│   ├── 📁 utils",
+    "│   │   ├── 📜 formatters.js",
+    "│   │   └── 📜 validators.js",
+    "│   ├── 🎨 App.css",
+    "│   ├── ⚛️  App.jsx",
+    "│   ├── 🎨 index.css",
+    "│   └── ⚛️  main.jsx",
+    "├── 📄 .env.example",
+    "├── 📄 .env.local",
+    "├── 📄 .gitignore",
+    "├── 📄 analyze.mjs",
+    "├── 📋 deep-report.json",
+    "├── 📜 eslint.config.js",
+    "├── 🌐 index.html",
+    "├── 📄 New-analyze.mjs",
+    "├── 📋 package-lock.json",
+    "├── 📋 package.json",
+    "├── 📜 postcss.config.js",
+    "├── 📝 README.md",
+    "├── 📄 remove-consolelogs.mjs",
+    "├── 📜 tailwind.config.js",
+    "└── 📜 vite.config.js"
+  ],
+  "projectFlow": {
+    "entryPoint": "index.html → main.jsx → App.jsx",
+    "bundler": "Vite",
+    "framework": "React (JavaScript)",
+    "routing": "React Router v6",
+    "stateManagement": [
+      "Zustand — global store (authStore.js)",
+      "React Context API (AuthContext, FPOContext)",
+      "useState — local component state"
+    ],
+    "authFlow": [
+      "Firebase Authentication (Phone OTP / Email-Password)",
+      "REST API auth endpoints (login / OTP / register)",
+      "ProtectedRoute.jsx — guards private pages"
+    ],
+    "dataLayer": [
+      "Axios — HTTP client (wrapped in apiClient.js)",
+      "Firebase Firestore — real-time NoSQL"
+    ],
+    "uiStyling": [
+      "Tailwind CSS — utility-first",
+      "lucide-react",
+      "@mui/material",
+      "Charts: recharts"
+    ],
+    "formHandling": [
+      "Controlled components with useState"
+    ],
+    "otherPatterns": []
+  },
+  "fonts": [
+    "Google Fonts Link: https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  ],
+  "styleSummary": {
+    "tailwindFiles": 25,
+    "totalTwBlocks": 881,
+    "inlineStyleFiles": 8,
+    "totalInlineStyles": 28,
+    "cssImportCount": 0,
+    "cssVarsUsed": [],
+    "samples": [
+      {
+        "file": "src/App.jsx",
+        "sample": "min-h-screen flex items-center justify-center bg-fpo-cream"
+      },
+      {
+        "file": "src/components/Common/Header.jsx",
+        "sample": "sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm"
+      },
+      {
+        "file": "src/components/Protected/ProtectedRoute.jsx",
+        "sample": "min-h-screen flex items-center justify-center bg-fpo-cream"
+      },
+      {
+        "file": "src/context/AuthContext.jsx",
+        "sample": "min-h-screen flex items-center justify-center bg-fpo-cream"
+      },
+      {
+        "file": "src/pages/Auth/Login.jsx",
+        "sample": "min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-green-50"
+      },
+      {
+        "file": "src/pages/Auth/OTPValidation.jsx",
+        "sample": "min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4"
+      }
+    ]
+  },
+  "moduleSummary": {
+    "Other": {
+      "files": 6,
+      "loc": 100,
+      "functions": 2,
+      "components": 2,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Common Components": {
+      "files": 1,
+      "loc": 160,
+      "functions": 1,
+      "components": 1,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Protected / Routing": {
+      "files": 1,
+      "loc": 26,
+      "functions": 1,
+      "components": 1,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Config": {
+      "files": 2,
+      "loc": 44,
+      "functions": 1,
+      "components": 2,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "React Context": {
+      "files": 2,
+      "loc": 135,
+      "functions": 4,
+      "components": 4,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Custom Hooks": {
+      "files": 3,
+      "loc": 389,
+      "functions": 15,
+      "components": 0,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Auth Pages": {
+      "files": 3,
+      "loc": 623,
+      "functions": 19,
+      "components": 4,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 1
+    },
+    "Dashboard Pages": {
+      "files": 6,
+      "loc": 1439,
+      "functions": 8,
+      "components": 10,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 8
+    },
+    "Dashboard Sub-sections": {
+      "files": 8,
+      "loc": 2138,
+      "functions": 37,
+      "components": 11,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 5
+    },
+    "Units Pages": {
+      "files": 4,
+      "loc": 565,
+      "functions": 5,
+      "components": 3,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Routing": {
+      "files": 2,
+      "loc": 48,
+      "functions": 1,
+      "components": 7,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "API Services": {
+      "files": 4,
+      "loc": 389,
+      "functions": 14,
+      "components": 3,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 14
+    },
+    "Firebase Services": {
+      "files": 1,
+      "loc": 78,
+      "functions": 7,
+      "components": 0,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Service Utilities": {
+      "files": 1,
+      "loc": 62,
+      "functions": 4,
+      "components": 0,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "State (Zustand)": {
+      "files": 1,
+      "loc": 67,
+      "functions": 0,
+      "components": 0,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    },
+    "Utilities": {
+      "files": 2,
+      "loc": 162,
+      "functions": 19,
+      "components": 0,
+      "consoleLogs": 0,
+      "todos": 0,
+      "inlineStyles": 0
+    }
+  },
+  "connectivity": [
+    {
+      "file": "src/store/authStore.js",
+      "importedBy": [
+        "src/components/Common/Header.jsx",
+        "src/components/Protected/ProtectedRoute.jsx",
+        "src/context/AuthContext.jsx",
+        "src/hooks/useAuth.js",
+        "src/hooks/useRoles.js",
+        "src/pages/Auth/Login.jsx",
+        "src/pages/Dashboard/MainDashboard.jsx",
+        "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+        "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+        "src/pages/DashboardSubsections/Member/Member.jsx",
+        "src/pages/DashboardSubsections/Member/Store.jsx",
+        "src/pages/Units/MyFPO.jsx",
+        "src/pages/Units/Units.jsx",
+        "src/services/api/Entry/EntryLoader.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/routes/routeConfig.js",
+      "importedBy": [
+        "src/components/Common/Header.jsx",
+        "src/components/Protected/ProtectedRoute.jsx",
+        "src/hooks/useAuth.js",
+        "src/pages/Auth/Login.jsx",
+        "src/pages/Auth/OTPValidation.jsx",
+        "src/pages/Auth/Register.jsx",
+        "src/pages/Units/MyFPO.jsx",
+        "src/routes/index.jsx",
+        "src/services/api/Entry/EntryLoader.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/components/Common/Header.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/AccountantDashboard.jsx",
+        "src/pages/Dashboard/CEODashboard.jsx",
+        "src/pages/Dashboard/DirectorDashboard.jsx",
+        "src/pages/Dashboard/MainDashboard.jsx",
+        "src/pages/Dashboard/MemberDashboard.jsx",
+        "src/pages/Dashboard/PromoterDashboard.jsx",
+        "src/pages/Units/Units.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js",
+        "src/utils/formatters.js",
+        "src/routes/routeConfig.js",
+        "src/hooks/useAuth.js"
+      ]
+    },
+    {
+      "file": "src/hooks/useAuth.js",
+      "importedBy": [
+        "src/components/Common/Header.jsx",
+        "src/pages/Auth/Login.jsx",
+        "src/pages/Auth/OTPValidation.jsx",
+        "src/pages/Auth/Register.jsx",
+        "src/pages/Units/Units.jsx"
+      ],
+      "imports": [
+        "src/services/api/authApi.js",
+        "src/store/authStore.js",
+        "src/routes/routeConfig.js"
+      ]
+    },
+    {
+      "file": "src/services/api/authApi.js",
+      "importedBy": [
+        "src/context/AuthContext.jsx",
+        "src/hooks/useAuth.js",
+        "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+        "src/pages/DashboardSubsections/Member/Store.jsx",
+        "src/pages/Units/Units.jsx"
+      ],
+      "imports": [
+        "src/services/api/apiClient.js",
+        "src/services/api/endpoints.js"
+      ]
+    },
+    {
+      "file": "src/config/constants.js",
+      "importedBy": [
+        "src/context/FPOContext.jsx",
+        "src/hooks/useRoles.js",
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/services/api/apiClient.js",
+      "importedBy": [
+        "src/hooks/useApi.js",
+        "src/services/api/authApi.js"
+      ],
+      "imports": [
+        "src/services/utils/errorHandler.js"
+      ]
+    },
+    {
+      "file": "src/services/utils/errorHandler.js",
+      "importedBy": [
+        "src/services/api/apiClient.js",
+        "src/services/firebase/authService.js"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/utils/formatters.js",
+      "importedBy": [
+        "src/components/Common/Header.jsx",
+        "src/pages/Auth/OTPValidation.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/utils/validators.js",
+      "importedBy": [
+        "src/pages/Auth/Login.jsx",
+        "src/pages/Auth/Register.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/App.jsx",
+      "importedBy": [
+        "src/main.jsx"
+      ],
+      "imports": [
+        "src/context/AuthContext.jsx",
+        "src/context/FPOContext.jsx",
+        "src/routes/index.jsx"
+      ]
+    },
+    {
+      "file": "src/components/Protected/ProtectedRoute.jsx",
+      "importedBy": [
+        "src/routes/index.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js",
+        "src/routes/routeConfig.js"
+      ]
+    },
+    {
+      "file": "src/config/firebase.config.js",
+      "importedBy": [
+        "src/services/firebase/authService.js"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/context/AuthContext.jsx",
+      "importedBy": [
+        "src/App.jsx"
+      ],
+      "imports": [
+        "src/services/firebase/authService.js",
+        "src/services/api/authApi.js",
+        "src/store/authStore.js"
+      ]
+    },
+    {
+      "file": "src/context/FPOContext.jsx",
+      "importedBy": [
+        "src/App.jsx"
+      ],
+      "imports": [
+        "src/config/constants.js"
+      ]
+    },
+    {
+      "file": "src/pages/Dashboard/AccountantDashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": [
+        "src/components/Common/Header.jsx"
+      ]
+    },
+    {
+      "file": "src/pages/Dashboard/CEODashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": [
+        "src/components/Common/Header.jsx"
+      ]
+    },
+    {
+      "file": "src/pages/Dashboard/DirectorDashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": [
+        "src/components/Common/Header.jsx"
+      ]
+    },
+    {
+      "file": "src/pages/Dashboard/MemberDashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": [
+        "src/components/Common/Header.jsx",
+        "src/pages/DashboardSubsections/Sidebar.jsx",
+        "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+        "src/pages/DashboardSubsections/Member/Member.jsx",
+        "src/pages/DashboardSubsections/Member/CapacityHub.jsx",
+        "src/pages/DashboardSubsections/Member/Store.jsx",
+        "src/pages/DashboardSubsections/Member/Produce.jsx",
+        "src/pages/DashboardSubsections/Member/Services.jsx",
+        "src/pages/DashboardSubsections/Member/IssueBox.jsx"
+      ]
+    },
+    {
+      "file": "src/pages/Dashboard/PromoterDashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MainDashboard.jsx"
+      ],
+      "imports": [
+        "src/components/Common/Header.jsx"
+      ]
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/CapacityHub.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js"
+      ]
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": [
+        "src/services/api/authApi.js",
+        "src/store/authStore.js"
+      ]
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Member.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js"
+      ]
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Produce.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Services.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Store.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": [
+        "src/services/api/authApi.js",
+        "src/store/authStore.js"
+      ]
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Sidebar.jsx",
+      "importedBy": [
+        "src/pages/Dashboard/MemberDashboard.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/pages/Units/AllFPO.jsx",
+      "importedBy": [
+        "src/pages/Units/Units.jsx"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/pages/Units/MyFPO.jsx",
+      "importedBy": [
+        "src/pages/Units/Units.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js",
+        "src/routes/routeConfig.js"
+      ]
+    },
+    {
+      "file": "src/pages/Units/Units.jsx",
+      "importedBy": [
+        "src/routes/index.jsx"
+      ],
+      "imports": [
+        "src/store/authStore.js",
+        "src/hooks/useAuth.js",
+        "src/components/Common/Header.jsx",
+        "src/pages/Units/MyFPO.jsx",
+        "src/pages/Units/AllFPO.jsx",
+        "src/services/api/authApi.js"
+      ]
+    },
+    {
+      "file": "src/routes/index.jsx",
+      "importedBy": [
+        "src/App.jsx"
+      ],
+      "imports": [
+        "src/routes/routeConfig.js",
+        "src/pages/Units/Units.jsx",
+        "src/components/Protected/ProtectedRoute.jsx"
+      ]
+    },
+    {
+      "file": "src/services/api/endpoints.js",
+      "importedBy": [
+        "src/services/api/authApi.js"
+      ],
+      "imports": []
+    },
+    {
+      "file": "src/services/firebase/authService.js",
+      "importedBy": [
+        "src/context/AuthContext.jsx"
+      ],
+      "imports": [
+        "src/config/firebase.config.js",
+        "src/services/utils/errorHandler.js"
+      ]
+    }
+  ],
+  "deadFiles": [
+    {
+      "file": "src/hooks/useApi.js",
+      "loc": 91,
+      "exports": [
+        "usePaginatedApi",
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/hooks/useRoles.js",
+      "loc": 66,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/pages/Auth/Login.jsx",
+      "loc": 82,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/pages/Auth/OTPValidation.jsx",
+      "loc": 166,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/pages/Auth/Register.jsx",
+      "loc": 375,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/pages/Dashboard/MainDashboard.jsx",
+      "loc": 207,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    },
+    {
+      "file": "src/pages/Units/CreateFPOModal.jsx",
+      "loc": 0,
+      "exports": [],
+      "reason": "No exports & not imported"
+    },
+    {
+      "file": "src/services/api/Entry/EntryLoader.jsx",
+      "loc": 160,
+      "exports": [
+        "default"
+      ],
+      "reason": "Has exports but never imported"
+    }
+  ],
+  "apiUsage": {
+    "endpoints": {
+      "/auth/login": [
+        {
+          "file": "src/routes/routeConfig.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 4
+        }
+      ],
+      "/auth/otp": [
+        {
+          "file": "src/routes/routeConfig.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 5
+        }
+      ],
+      "/auth/register": [
+        {
+          "file": "src/routes/routeConfig.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 6
+        }
+      ],
+      "/auth/units": [
+        {
+          "file": "src/routes/routeConfig.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 7
+        }
+      ],
+      "/dashboard": [
+        {
+          "file": "src/routes/routeConfig.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 8
+        }
+      ],
+      "/login": [
+        {
+          "file": "src/services/api/apiClient.js",
+          "method": "DEFINED",
+          "lib": "constant",
+          "line": 32
+        }
+      ]
+    },
+    "firebase": {
+      "src/config/firebase.config.js": {
+        "methods": [
+          "getAuth"
+        ],
+        "count": 1
+      },
+      "src/services/firebase/authService.js": {
+        "methods": [
+          "RecaptchaVerifier",
+          "signInWithPhoneNumber",
+          "signOut",
+          "onAuthStateChanged"
+        ],
+        "count": 4
+      }
+    }
+  },
+  "hardcodedURLs": [
+    "https://api.dicebear.com/7.x/avataaars/svg?seed=unknown",
+    "https://api.dicebear.com/7.x/avataaars/svg?seed=$",
+    "https://via.placeholder.com/400x200?text=No+Image",
+    "https://ui-avatars.com/api/?name=$",
+    "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop",
+    "https://api.dicebear.com/7.x/adventurer/svg?seed=Deepak",
+    "https://api.dicebear.com/7.x/adventurer/svg?seed=Anaya",
+    "https://api.dicebear.com/7.x/adventurer/svg?seed=Ramesh",
+    "https://api.dicebear.com/7.x/adventurer/svg?seed=Sunita",
+    "http://www.w3.org/2000/svg",
+    "http://3.109.253.115"
+  ],
+  "suggestions": [
+    {
+      "type": "REMOVE",
+      "file": "src/hooks/useApi.js",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (91 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/hooks/useRoles.js",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (66 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/pages/Auth/Login.jsx",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (82 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/pages/Auth/OTPValidation.jsx",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (166 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/pages/Auth/Register.jsx",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (375 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/pages/Dashboard/MainDashboard.jsx",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (207 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/pages/Units/CreateFPOModal.jsx",
+      "reason": "No exports & not imported",
+      "action": "Verify in routeConfig.js first, then delete (0 LOC)"
+    },
+    {
+      "type": "REMOVE",
+      "file": "src/services/api/Entry/EntryLoader.jsx",
+      "reason": "Has exports but never imported",
+      "action": "Verify in routeConfig.js first, then delete (160 LOC)"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/Auth/Register.jsx",
+      "reason": "Large file (375 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/Dashboard/CEODashboard.jsx",
+      "reason": "Large file (306 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/Dashboard/DirectorDashboard.jsx",
+      "reason": "Large file (365 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "STYLE",
+      "file": "src/pages/Dashboard/MainDashboard.jsx",
+      "reason": "4 inline style blocks",
+      "action": "Replace with Tailwind classes or CSS variables"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+      "reason": "Large file (528 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+      "reason": "Large file (304 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "REFACTOR",
+      "file": "src/pages/DashboardSubsections/Member/Member.jsx",
+      "reason": "Large file (752 LOC)",
+      "action": "Split into sub-components; extract data logic into custom hooks"
+    },
+    {
+      "type": "ERROR_HANDLING",
+      "file": "src/routes/routeConfig.js",
+      "reason": "5 API call(s) without error handling",
+      "action": "Add try/catch or .catch() to all API calls"
+    },
+    {
+      "type": "STYLE",
+      "file": "src/services/api/Entry/EntryLoader.jsx",
+      "reason": "14 inline style blocks",
+      "action": "Replace with Tailwind classes or CSS variables"
+    }
+  ],
+  "topComplexity": {
+    "byLOC": [
+      {
+        "file": "src/pages/DashboardSubsections/Member/Member.jsx",
+        "loc": 752,
+        "functions": 12,
+        "components": 1
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+        "loc": 528,
+        "functions": 6,
+        "components": 4
+      },
+      {
+        "file": "src/pages/Auth/Register.jsx",
+        "loc": 375,
+        "functions": 10,
+        "components": 2
+      },
+      {
+        "file": "src/pages/Dashboard/DirectorDashboard.jsx",
+        "loc": 365,
+        "functions": 1,
+        "components": 2
+      },
+      {
+        "file": "src/pages/Dashboard/CEODashboard.jsx",
+        "loc": 306,
+        "functions": 1,
+        "components": 2
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+        "loc": 304,
+        "functions": 7,
+        "components": 1
+      },
+      {
+        "file": "src/pages/Dashboard/AccountantDashboard.jsx",
+        "loc": 270,
+        "functions": 2,
+        "components": 2
+      },
+      {
+        "file": "src/pages/Dashboard/PromoterDashboard.jsx",
+        "loc": 249,
+        "functions": 1,
+        "components": 1
+      },
+      {
+        "file": "src/hooks/useAuth.js",
+        "loc": 232,
+        "functions": 9,
+        "components": 0
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/Store.jsx",
+        "loc": 223,
+        "functions": 5,
+        "components": 1
+      }
+    ],
+    "byFunctions": [
+      {
+        "file": "src/utils/formatters.js",
+        "functions": 14,
+        "functionNames": [
+          "formatMobile",
+          "maskMobile",
+          "formatDate",
+          "formatDateTime",
+          "formatForAPI",
+          "timeAgo",
+          "formatCurrency",
+          "formatNumber",
+          "formatDistance",
+          "formatFileSize",
+          "formatFullName",
+          "getInitials",
+          "capitalize",
+          "titleCase"
+        ],
+        "loc": 113
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/Member.jsx",
+        "functions": 12,
+        "functionNames": [
+          "DUMMY_AVATAR",
+          "convertToAcre",
+          "Member",
+          "getTypeColor",
+          "maskPhoneNumber",
+          "fetchMembers",
+          "fetchLandInfo",
+          "handleClickOutside",
+          "handleCall",
+          "handlePreviousPage",
+          "handleNextPage",
+          "handlePageClick"
+        ],
+        "loc": 752
+      },
+      {
+        "file": "src/services/api/authApi.js",
+        "functions": 12,
+        "functionNames": [
+          "getProfile",
+          "createProfile",
+          "getStateDistrictList",
+          "getVillageList",
+          "getAllFPONearBy",
+          "getUnitMembers",
+          "getFarmerLandInfo",
+          "getUnitItems",
+          "getUnitSownAreaPerCropPerMember",
+          "getUnitIssues",
+          "getGroupDemandAvailability",
+          "getGroupActivities"
+        ],
+        "loc": 158
+      },
+      {
+        "file": "src/pages/Auth/Register.jsx",
+        "functions": 10,
+        "functionNames": [
+          "Register",
+          "handleChange",
+          "handleStateSelect",
+          "handleDistrictSelect",
+          "handleTehsilSelect",
+          "handleVillageSelect",
+          "handleFirstNameChange",
+          "handleLastNameChange",
+          "filterSuggestions",
+          "handleSubmit"
+        ],
+        "loc": 375
+      },
+      {
+        "file": "src/hooks/useAuth.js",
+        "functions": 9,
+        "functionNames": [
+          "useAuth",
+          "startResendTimer",
+          "sendOTP",
+          "verifyOTP",
+          "resendOTP",
+          "register",
+          "syncProfile",
+          "startProfileWatch",
+          "logout"
+        ],
+        "loc": 232
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+        "functions": 7,
+        "functionNames": [
+          "IssueBox",
+          "getTimeAgo",
+          "getMemberInfo",
+          "fetchData",
+          "handleJoin",
+          "toggleExpandedIssue",
+          "isDescriptionLong"
+        ],
+        "loc": 304
+      },
+      {
+        "file": "src/services/firebase/authService.js",
+        "functions": 7,
+        "functionNames": [
+          "setupRecaptcha",
+          "sendPhoneOTP",
+          "verifyPhoneOTP",
+          "resendPhoneOTP",
+          "firebaseSignOut",
+          "onAuthChange",
+          "getCurrentUser"
+        ],
+        "loc": 78
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+        "functions": 6,
+        "functionNames": [
+          "convertToAcre",
+          "fetchInBatches",
+          "Dashboard",
+          "fetchAllData",
+          "nextCrop",
+          "prevCrop"
+        ],
+        "loc": 528
+      },
+      {
+        "file": "src/pages/Auth/OTPValidation.jsx",
+        "functions": 5,
+        "functionNames": [
+          "OTPValidation",
+          "handleChange",
+          "handleKeyDown",
+          "handleVerify",
+          "handleResend"
+        ],
+        "loc": 166
+      },
+      {
+        "file": "src/pages/DashboardSubsections/Member/Store.jsx",
+        "functions": 5,
+        "functionNames": [
+          "Store",
+          "fetchData",
+          "getDaysAgo",
+          "getMemberInfo",
+          "getStatus"
+        ],
+        "loc": 223
+      }
+    ]
+  },
+  "files": [
+    {
+      "file": "eslint.config.js",
+      "ext": ".js",
+      "totalLines": 30,
+      "loc": 28,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "@eslint/js",
+        "globals",
+        "eslint-plugin-react-hooks",
+        "eslint-plugin-react-refresh",
+        "eslint/config"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    },
+    {
+      "file": "postcss.config.js",
+      "ext": ".js",
+      "totalLines": 7,
+      "loc": 6,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    },
+    {
+      "file": "src/App.jsx",
+      "ext": ".jsx",
+      "totalLines": 34,
+      "loc": 30,
+      "functions": 2,
+      "functionNames": [
+        "FullScreenLoader",
+        "App"
+      ],
+      "components": 2,
+      "componentNames": [
+        "FullScreenLoader",
+        "App"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "./context/AuthContext",
+        "./context/FPOContext",
+        "./routes/index"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 5,
+        "tailwindSamples": [
+          "min-h-screen flex items-center justify-center bg-fpo-cream",
+          "flex flex-col items-center gap-4",
+          "w-14 h-14 border-4 border-fpo-green border-t-transparent rounded-full animate-spin"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "Routes",
+        "Route",
+        "BrowserRouter"
+      ],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    },
+    {
+      "file": "src/components/Common/Header.jsx",
+      "ext": ".jsx",
+      "totalLines": 175,
+      "loc": 160,
+      "functions": 1,
+      "functionNames": [
+        "handler"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Header"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useAuthStore",
+        "useAuth",
+        "useState",
+        "useRef",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../store/authStore",
+        "../../utils/formatters",
+        "../../routes/routeConfig",
+        "../../hooks/useAuth"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 42,
+        "tailwindSamples": [
+          "sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm",
+          "px-6 py-4",
+          "flex items-center justify-between"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": true,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Common Components"
+    },
+    {
+      "file": "src/components/Protected/ProtectedRoute.jsx",
+      "ext": ".jsx",
+      "totalLines": 35,
+      "loc": 26,
+      "functions": 1,
+      "functionNames": [
+        "ProtectedRoute"
+      ],
+      "components": 1,
+      "componentNames": [
+        "ProtectedRoute"
+      ],
+      "hooksUsed": [
+        "useLocation",
+        "useAuthStore"
+      ],
+      "localImports": [
+        "../../store/authStore",
+        "../../routes/routeConfig"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 4,
+        "tailwindSamples": [
+          "min-h-screen flex items-center justify-center bg-fpo-cream",
+          "flex flex-col items-center gap-3",
+          "w-12 h-12 border-4 border-fpo-green border-t-transparent\r\n   "
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useLocation",
+        "Route"
+      ],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Protected / Routing"
+    },
+    {
+      "file": "src/config/constants.js",
+      "ext": ".js",
+      "totalLines": 27,
+      "loc": 19,
+      "functions": 0,
+      "functionNames": [],
+      "components": 2,
+      "componentNames": [
+        "LANGUAGES",
+        "ROLES"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "APP_NAME",
+        "APP_VERSION",
+        "LANGUAGES",
+        "DEFAULT_LANGUAGE",
+        "ROLES",
+        "STORAGE_KEYS"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Config"
+    },
+    {
+      "file": "src/config/firebase.config.js",
+      "ext": ".js",
+      "totalLines": 35,
+      "loc": 25,
+      "functions": 1,
+      "functionNames": [
+        "getFirebaseMessaging"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "firebase/app",
+        "firebase/auth",
+        "firebase/firestore",
+        "firebase/storage",
+        "firebase/messaging"
+      ],
+      "exports": [
+        "auth",
+        "db",
+        "storage",
+        "getFirebaseMessaging",
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [
+        {
+          "method": "getAuth",
+          "line": 21
+        }
+      ],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Config"
+    },
+    {
+      "file": "src/context/AuthContext.jsx",
+      "ext": ".jsx",
+      "totalLines": 76,
+      "loc": 57,
+      "functions": 2,
+      "functionNames": [
+        "AuthProvider",
+        "useAuthContext"
+      ],
+      "components": 2,
+      "componentNames": [
+        "AuthContext",
+        "AuthProvider"
+      ],
+      "hooksUsed": [
+        "useState",
+        "useAuthStore",
+        "useEffect",
+        "useContext"
+      ],
+      "localImports": [
+        "../services/firebase/authService",
+        "../services/api/authApi",
+        "../store/authStore"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "AuthProvider",
+        "useAuthContext",
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 5,
+        "tailwindSamples": [
+          "min-h-screen flex items-center justify-center bg-fpo-cream",
+          "flex flex-col items-center gap-4",
+          "w-14 h-14 border-4 border-fpo-green border-t-transparent\r\n   "
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": true,
+        "createContext": true,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "React Context"
+    },
+    {
+      "file": "src/context/FPOContext.jsx",
+      "ext": ".jsx",
+      "totalLines": 98,
+      "loc": 78,
+      "functions": 2,
+      "functionNames": [
+        "FPOProvider",
+        "useFPO"
+      ],
+      "components": 2,
+      "componentNames": [
+        "FPOContext",
+        "FPOProvider"
+      ],
+      "hooksUsed": [
+        "useFPOStore",
+        "useCallback",
+        "useContext"
+      ],
+      "localImports": [
+        "../config/constants"
+      ],
+      "npmImports": [
+        "react",
+        "zustand",
+        "zustand/middleware"
+      ],
+      "exports": [
+        "useFPOStore",
+        "FPOProvider",
+        "useFPO",
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": true,
+        "useRef": false,
+        "useContext": true,
+        "createContext": true,
+        "zustand": true
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "React Context"
+    },
+    {
+      "file": "src/hooks/useApi.js",
+      "ext": ".js",
+      "totalLines": 109,
+      "loc": 91,
+      "functions": 2,
+      "functionNames": [
+        "useApi",
+        "usePaginatedApi"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [
+        "useState",
+        "useCallback"
+      ],
+      "localImports": [
+        "../services/api/apiClient"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "usePaginatedApi",
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": true,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Custom Hooks"
+    },
+    {
+      "file": "src/hooks/useAuth.js",
+      "ext": ".js",
+      "totalLines": 258,
+      "loc": 232,
+      "functions": 9,
+      "functionNames": [
+        "useAuth",
+        "startResendTimer",
+        "sendOTP",
+        "verifyOTP",
+        "resendOTP",
+        "register",
+        "syncProfile",
+        "startProfileWatch",
+        "logout"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [
+        "useNavigate",
+        "useState",
+        "useAuthStore"
+      ],
+      "localImports": [
+        "../services/api/authApi",
+        "../store/authStore",
+        "../routes/routeConfig"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Custom Hooks"
+    },
+    {
+      "file": "src/hooks/useRoles.js",
+      "ext": ".js",
+      "totalLines": 101,
+      "loc": 66,
+      "functions": 4,
+      "functionNames": [
+        "useRoles",
+        "hasRole",
+        "hasAnyRole",
+        "can"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [
+        "useAuthStore"
+      ],
+      "localImports": [
+        "../store/authStore",
+        "../config/constants"
+      ],
+      "npmImports": [],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Custom Hooks"
+    },
+    {
+      "file": "src/main.jsx",
+      "ext": ".jsx",
+      "totalLines": 11,
+      "loc": 9,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [
+        "./App.jsx"
+      ],
+      "npmImports": [
+        "react",
+        "react-dom/client"
+      ],
+      "exports": [],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    },
+    {
+      "file": "src/pages/Auth/Login.jsx",
+      "ext": ".jsx",
+      "totalLines": 95,
+      "loc": 82,
+      "functions": 4,
+      "functionNames": [
+        "Login",
+        "handleChange",
+        "handleSubmit",
+        "handleKeyDown"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Login"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useAuthStore",
+        "useAuth",
+        "useState"
+      ],
+      "localImports": [
+        "../../hooks/useAuth",
+        "../../routes/routeConfig",
+        "../../store/authStore",
+        "../../utils/validators"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 14,
+        "tailwindSamples": [
+          "min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-green-50",
+          "flex flex-col items-center mb-8",
+          "w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-md"
+        ],
+        "inlineStyles": 1,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Auth Pages"
+    },
+    {
+      "file": "src/pages/Auth/OTPValidation.jsx",
+      "ext": ".jsx",
+      "totalLines": 188,
+      "loc": 166,
+      "functions": 5,
+      "functionNames": [
+        "OTPValidation",
+        "handleChange",
+        "handleKeyDown",
+        "handleVerify",
+        "handleResend"
+      ],
+      "components": 1,
+      "componentNames": [
+        "OTPValidation"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useLocation",
+        "useAuth",
+        "useState",
+        "useRef",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../hooks/useAuth",
+        "../../routes/routeConfig",
+        "../../utils/formatters"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 26,
+        "tailwindSamples": [
+          "min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4",
+          "flex flex-col items-center mb-8",
+          "w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-md"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate",
+        "useLocation"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": true,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Auth Pages"
+    },
+    {
+      "file": "src/pages/Auth/Register.jsx",
+      "ext": ".jsx",
+      "totalLines": 405,
+      "loc": 375,
+      "functions": 10,
+      "functionNames": [
+        "Register",
+        "handleChange",
+        "handleStateSelect",
+        "handleDistrictSelect",
+        "handleTehsilSelect",
+        "handleVillageSelect",
+        "handleFirstNameChange",
+        "handleLastNameChange",
+        "filterSuggestions",
+        "handleSubmit"
+      ],
+      "components": 2,
+      "componentNames": [
+        "Register",
+        "LocationField"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useLocation",
+        "useAuth",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../hooks/useAuth",
+        "../../routes/routeConfig",
+        "../../utils/validators"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 51,
+        "tailwindSamples": [
+          "relative",
+          "text-sm font-semibold text-gray-700 block mb-1.5",
+          "relative"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate",
+        "useLocation"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Auth Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/AccountantDashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 284,
+      "loc": 270,
+      "functions": 2,
+      "functionNames": [
+        "AccountantDashboard",
+        "KPICard"
+      ],
+      "components": 2,
+      "componentNames": [
+        "AccountantDashboard",
+        "KPICard"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "../../components/Common/Header"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 45,
+        "tailwindSamples": [
+          "flex justify-between items-start mb-4",
+          "text-sm font-semibold text-slate-700",
+          "text-2xl font-bold text-slate-900 mb-1"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/CEODashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 324,
+      "loc": 306,
+      "functions": 1,
+      "functionNames": [
+        "CEODashboard"
+      ],
+      "components": 2,
+      "componentNames": [
+        "CEODashboard",
+        "Icon"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "../../components/Common/Header"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 54,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-slate-50 to-slate-100",
+          "flex",
+          "w-64 bg-white h-[calc(100vh-64px)] fixed left-0 top-16 shadow-lg border-r"
+        ],
+        "inlineStyles": 1,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/DirectorDashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 382,
+      "loc": 365,
+      "functions": 1,
+      "functionNames": [
+        "DirectorDashboard"
+      ],
+      "components": 2,
+      "componentNames": [
+        "DirectorDashboard",
+        "Icon"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "../../components/Common/Header"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 72,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-slate-50 to-slate-100",
+          "flex ",
+          "w-64 bg-white h-[calc(100vh-64px)] fixed left-0 top-16 shadow-lg border-r"
+        ],
+        "inlineStyles": 1,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/MainDashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 233,
+      "loc": 207,
+      "functions": 2,
+      "functionNames": [
+        "RoleCard",
+        "MainDashboard"
+      ],
+      "components": 2,
+      "componentNames": [
+        "RoleCard",
+        "MainDashboard"
+      ],
+      "hooksUsed": [
+        "useState",
+        "useAuthStore"
+      ],
+      "localImports": [
+        "../../components/Common/Header",
+        "../../pages/Dashboard/CEODashboard",
+        "../../pages/Dashboard/DirectorDashboard",
+        "../../pages/Dashboard/AccountantDashboard",
+        "../../pages/Dashboard/PromoterDashboard",
+        "../../pages/Dashboard/MemberDashboard",
+        "../../store/authStore",
+        "../../config/constants"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 29,
+        "tailwindSamples": [
+          "absolute top-3 right-3 z-20 bg-gray-200 rounded-full p-1.5 shadow",
+          "w-4 h-4 text-gray-500",
+          "absolute -top-8 -right-8 w-28 h-28 rounded-full bg-white"
+        ],
+        "inlineStyles": 4,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/MemberDashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 54,
+      "loc": 42,
+      "functions": 1,
+      "functionNames": [
+        "MemberDashboard"
+      ],
+      "components": 1,
+      "componentNames": [
+        "MemberDashboard"
+      ],
+      "hooksUsed": [
+        "useState"
+      ],
+      "localImports": [
+        "../../components/Common/Header",
+        "../DashboardSubsections/Sidebar",
+        "../DashboardSubsections/Member/Dashboard",
+        "../DashboardSubsections/Member/Member",
+        "../DashboardSubsections/Member/CapacityHub",
+        "../DashboardSubsections/Member/Store",
+        "../DashboardSubsections/Member/Produce",
+        "../DashboardSubsections/Member/Services",
+        "../DashboardSubsections/Member/IssueBox"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 4,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-slate-50 to-slate-100",
+          "flex",
+          "ml-64 flex-1"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/Dashboard/PromoterDashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 263,
+      "loc": 249,
+      "functions": 1,
+      "functionNames": [
+        "PromoterDashboard"
+      ],
+      "components": 1,
+      "componentNames": [
+        "PromoterDashboard"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "../../components/Common/Header"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 73,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-slate-50 to-slate-100",
+          "flex ",
+          "w-64 bg-white h-[calc(100vh-64px)] fixed left-0 top-16 shadow-lg border-r"
+        ],
+        "inlineStyles": 2,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Pages"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/CapacityHub.jsx",
+      "ext": ".jsx",
+      "totalLines": 26,
+      "loc": 23,
+      "functions": 1,
+      "functionNames": [
+        "CapacityHub"
+      ],
+      "components": 1,
+      "componentNames": [
+        "CapacityHub"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 8,
+        "tailwindSamples": [
+          "flex flex-col items-center justify-center min-h-[60vh]",
+          "text-center",
+          "mx-auto text-emerald-600 mb-6 opacity-30"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Dashboard.jsx",
+      "ext": ".jsx",
+      "totalLines": 557,
+      "loc": 528,
+      "functions": 6,
+      "functionNames": [
+        "convertToAcre",
+        "fetchInBatches",
+        "Dashboard",
+        "fetchAllData",
+        "nextCrop",
+        "prevCrop"
+      ],
+      "components": 4,
+      "componentNames": [
+        "Dashboard",
+        "Icon",
+        "Icon",
+        "Icon"
+      ],
+      "hooksUsed": [
+        "useAuthStore",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../../store/authStore"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 75,
+        "tailwindSamples": [
+          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8",
+          "flex justify-between items-start mb-4",
+          "text-sm font-semibold text-slate-700"
+        ],
+        "inlineStyles": 2,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/IssueBox.jsx",
+      "ext": ".jsx",
+      "totalLines": 343,
+      "loc": 304,
+      "functions": 7,
+      "functionNames": [
+        "IssueBox",
+        "getTimeAgo",
+        "getMemberInfo",
+        "fetchData",
+        "handleJoin",
+        "toggleExpandedIssue",
+        "isDescriptionLong"
+      ],
+      "components": 1,
+      "componentNames": [
+        "IssueBox"
+      ],
+      "hooksUsed": [
+        "useAuthStore",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../../services/api/authApi",
+        "../../../store/authStore"
+      ],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "https://api.dicebear.com/7.x/avataaars/svg?seed=unknown",
+        "https://api.dicebear.com/7.x/avataaars/svg?seed=$",
+        "https://via.placeholder.com/400x200?text=No+Image"
+      ],
+      "styling": {
+        "tailwindBlocks": 39,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 flex items-center justify-center",
+          "text-slate-600 text-lg",
+          "min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 p-8"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Member.jsx",
+      "ext": ".jsx",
+      "totalLines": 837,
+      "loc": 752,
+      "functions": 12,
+      "functionNames": [
+        "DUMMY_AVATAR",
+        "convertToAcre",
+        "Member",
+        "getTypeColor",
+        "maskPhoneNumber",
+        "fetchMembers",
+        "fetchLandInfo",
+        "handleClickOutside",
+        "handleCall",
+        "handlePreviousPage",
+        "handleNextPage",
+        "handlePageClick"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Member"
+      ],
+      "hooksUsed": [
+        "useState",
+        "useRef",
+        "useAuthStore",
+        "useEffect",
+        "useMemo"
+      ],
+      "localImports": [
+        "../../../store/authStore"
+      ],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "https://ui-avatars.com/api/?name=$"
+      ],
+      "styling": {
+        "tailwindBlocks": 96,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-slate-100",
+          "mb-8",
+          "text-4xl font-bold text-slate-900 mb-2"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": true,
+        "useCallback": false,
+        "useRef": true,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Produce.jsx",
+      "ext": ".jsx",
+      "totalLines": 26,
+      "loc": 23,
+      "functions": 1,
+      "functionNames": [
+        "Produce"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Produce"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 8,
+        "tailwindSamples": [
+          "flex flex-col items-center justify-center min-h-[60vh]",
+          "text-center",
+          "mx-auto text-emerald-600 mb-6 opacity-30"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Services.jsx",
+      "ext": ".jsx",
+      "totalLines": 226,
+      "loc": 206,
+      "functions": 4,
+      "functionNames": [
+        "Services",
+        "handleSelect",
+        "handleClose",
+        "step"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Services"
+      ],
+      "hooksUsed": [
+        "useState",
+        "useRef",
+        "useEffect"
+      ],
+      "localImports": [],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "Services"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=250&fit=crop",
+        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop",
+        "https://api.dicebear.com/7.x/adventurer/svg?seed=Deepak",
+        "https://api.dicebear.com/7.x/adventurer/svg?seed=Anaya",
+        "https://api.dicebear.com/7.x/adventurer/svg?seed=Ramesh",
+        "https://api.dicebear.com/7.x/adventurer/svg?seed=Sunita"
+      ],
+      "styling": {
+        "tailwindBlocks": 44,
+        "tailwindSamples": [
+          "min-h-screen w-full bg-[#f0faf4] font-sans",
+          "text-[28px] font-bold text-[#1a3c2e] mb-2",
+          "text-[#5a7a6a] mb-7 text-[15px]"
+        ],
+        "inlineStyles": 3,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": true,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Member/Store.jsx",
+      "ext": ".jsx",
+      "totalLines": 243,
+      "loc": 223,
+      "functions": 5,
+      "functionNames": [
+        "Store",
+        "fetchData",
+        "getDaysAgo",
+        "getMemberInfo",
+        "getStatus"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Store"
+      ],
+      "hooksUsed": [
+        "useAuthStore",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../../services/api/authApi",
+        "../../../store/authStore"
+      ],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "https://api.dicebear.com/7.x/avataaars/svg?seed=unknown",
+        "https://api.dicebear.com/7.x/avataaars/svg?seed=$"
+      ],
+      "styling": {
+        "tailwindBlocks": 38,
+        "tailwindSamples": [
+          "min-h-screen bg-emerald-50 flex items-center justify-center",
+          "text-slate-600 text-lg",
+          "min-h-screen bg-emerald-50 p-6"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/DashboardSubsections/Sidebar.jsx",
+      "ext": ".jsx",
+      "totalLines": 83,
+      "loc": 79,
+      "functions": 1,
+      "functionNames": [
+        "Sidebar"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Sidebar"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 5,
+        "tailwindSamples": [
+          "w-64 bg-white h-[calc(100vh-64px)] fixed left-0 top-16 shadow-lg border-r",
+          "p-6 space-y-3"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Dashboard Sub-sections"
+    },
+    {
+      "file": "src/pages/Units/AllFPO.jsx",
+      "ext": ".jsx",
+      "totalLines": 205,
+      "loc": 193,
+      "functions": 1,
+      "functionNames": [
+        "AllFPO"
+      ],
+      "components": 1,
+      "componentNames": [
+        "AllFPO"
+      ],
+      "hooksUsed": [
+        "useState"
+      ],
+      "localImports": [],
+      "npmImports": [
+        "react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 49,
+        "tailwindSamples": [
+          "flex flex-col bg-gray-50 h-screen overflow-hidden",
+          "relative px-6 pt-6 pb-10 overflow-hidden flex-shrink-0 bg-gradient-to-br from-green-600",
+          "absolute -top-10 -right-10 w-52 h-52 bg-white/5 rounded-full"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Units Pages"
+    },
+    {
+      "file": "src/pages/Units/CreateFPOModal.jsx",
+      "ext": ".jsx",
+      "totalLines": 1,
+      "loc": 0,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Units Pages"
+    },
+    {
+      "file": "src/pages/Units/MyFPO.jsx",
+      "ext": ".jsx",
+      "totalLines": 238,
+      "loc": 222,
+      "functions": 3,
+      "functionNames": [
+        "MyFPO",
+        "getExtraInfo",
+        "handleSelectUnit"
+      ],
+      "components": 1,
+      "componentNames": [
+        "MyFPO"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useAuthStore",
+        "useState"
+      ],
+      "localImports": [
+        "../../store/authStore",
+        "../../routes/routeConfig"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 49,
+        "tailwindSamples": [
+          "flex flex-col bg-gray-50 h-screen overflow-hidden",
+          "relative px-6 pt-6 pb-10 overflow-hidden flex-shrink-0 bg-gradient-to-br from-green-600",
+          "absolute -top-10 -right-10 w-52 h-52 bg-white/5 rounded-full"
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Units Pages"
+    },
+    {
+      "file": "src/pages/Units/Units.jsx",
+      "ext": ".jsx",
+      "totalLines": 163,
+      "loc": 150,
+      "functions": 1,
+      "functionNames": [
+        "Units"
+      ],
+      "components": 1,
+      "componentNames": [
+        "Units"
+      ],
+      "hooksUsed": [
+        "useAuthStore",
+        "useAuth",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../store/authStore",
+        "../../hooks/useAuth",
+        "../../components/Common/Header",
+        "./MyFPO",
+        "./AllFPO",
+        "../../services/api/authApi"
+      ],
+      "npmImports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 32,
+        "tailwindSamples": [
+          "min-h-screen bg-gradient-to-br from-green-50 to-green-100\r\n    ",
+          "flex flex-col items-center gap-3",
+          "w-10 h-10 border-4 border-green-500 border-t-transparent\r\n   "
+        ],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Units Pages"
+    },
+    {
+      "file": "src/routes/index.jsx",
+      "ext": ".jsx",
+      "totalLines": 38,
+      "loc": 32,
+      "functions": 1,
+      "functionNames": [
+        "AppRoutes"
+      ],
+      "components": 6,
+      "componentNames": [
+        "EntryLoader",
+        "Login",
+        "OTPValidation",
+        "Register",
+        "MainDashboard",
+        "AppRoutes"
+      ],
+      "hooksUsed": [],
+      "localImports": [
+        "./routeConfig",
+        "../pages/Units/Units",
+        "../components/Protected/ProtectedRoute"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "Routes",
+        "Route"
+      ],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Routing"
+    },
+    {
+      "file": "src/routes/routeConfig.js",
+      "ext": ".js",
+      "totalLines": 20,
+      "loc": 16,
+      "functions": 0,
+      "functionNames": [],
+      "components": 1,
+      "componentNames": [
+        "ROUTES"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "ROUTES",
+        "PUBLIC_ROUTES",
+        "default"
+      ],
+      "apiCalls": [
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/auth/login",
+          "line": 4
+        },
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/auth/otp",
+          "line": 5
+        },
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/auth/register",
+          "line": 6
+        },
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/auth/units",
+          "line": 7
+        },
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/dashboard",
+          "line": 8
+        }
+      ],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Routing"
+    },
+    {
+      "file": "src/services/api/apiClient.js",
+      "ext": ".js",
+      "totalLines": 55,
+      "loc": 45,
+      "functions": 1,
+      "functionNames": [
+        "apiPost"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [
+        "../../services/utils/errorHandler"
+      ],
+      "npmImports": [
+        "axios"
+      ],
+      "exports": [
+        "apiPost",
+        "default"
+      ],
+      "apiCalls": [
+        {
+          "lib": "constant",
+          "method": "DEFINED",
+          "endpoint": "/login",
+          "line": 32
+        }
+      ],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "API Services"
+    },
+    {
+      "file": "src/services/api/authApi.js",
+      "ext": ".js",
+      "totalLines": 183,
+      "loc": 158,
+      "functions": 12,
+      "functionNames": [
+        "getProfile",
+        "createProfile",
+        "getStateDistrictList",
+        "getVillageList",
+        "getAllFPONearBy",
+        "getUnitMembers",
+        "getFarmerLandInfo",
+        "getUnitItems",
+        "getUnitSownAreaPerCropPerMember",
+        "getUnitIssues",
+        "getGroupDemandAvailability",
+        "getGroupActivities"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [
+        "./apiClient",
+        "./apiClient",
+        "./endpoints"
+      ],
+      "npmImports": [],
+      "exports": [
+        "getProfile",
+        "createProfile",
+        "getStateDistrictList",
+        "getVillageList",
+        "getAllFPONearBy",
+        "getUnitMembers",
+        "getFarmerLandInfo",
+        "getUnitItems",
+        "getUnitSownAreaPerCropPerMember",
+        "getUnitIssues",
+        "getGroupDemandAvailability",
+        "getGroupActivities"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "API Services"
+    },
+    {
+      "file": "src/services/api/endpoints.js",
+      "ext": ".js",
+      "totalLines": 56,
+      "loc": 26,
+      "functions": 0,
+      "functionNames": [],
+      "components": 2,
+      "componentNames": [
+        "ENDPOINTS",
+        "OPS"
+      ],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "OPS",
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "API Services"
+    },
+    {
+      "file": "src/services/api/Entry/EntryLoader.jsx",
+      "ext": ".jsx",
+      "totalLines": 173,
+      "loc": 160,
+      "functions": 1,
+      "functionNames": [
+        "EntryLoader"
+      ],
+      "components": 1,
+      "componentNames": [
+        "EntryLoader"
+      ],
+      "hooksUsed": [
+        "useNavigate",
+        "useAuthStore",
+        "useState",
+        "useEffect"
+      ],
+      "localImports": [
+        "../../../store/authStore",
+        "../../../routes/routeConfig"
+      ],
+      "npmImports": [
+        "react",
+        "react-router-dom",
+        "lucide-react"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "http://www.w3.org/2000/svg"
+      ],
+      "styling": {
+        "tailwindBlocks": 14,
+        "tailwindSamples": [
+          "min-h-screen flex flex-col items-center justify-center relative overflow-hidden",
+          "absolute inset-0 opacity-20",
+          "absolute w-96 h-96 rounded-full"
+        ],
+        "inlineStyles": 14,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [
+        "useNavigate"
+      ],
+      "statePatterns": {
+        "useState": true,
+        "useReducer": false,
+        "useEffect": true,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "API Services"
+    },
+    {
+      "file": "src/services/firebase/authService.js",
+      "ext": ".js",
+      "totalLines": 99,
+      "loc": 78,
+      "functions": 7,
+      "functionNames": [
+        "setupRecaptcha",
+        "sendPhoneOTP",
+        "verifyPhoneOTP",
+        "resendPhoneOTP",
+        "firebaseSignOut",
+        "onAuthChange",
+        "getCurrentUser"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [
+        "../../config/firebase.config",
+        "../utils/errorHandler"
+      ],
+      "npmImports": [],
+      "exports": [
+        "setupRecaptcha",
+        "sendPhoneOTP",
+        "verifyPhoneOTP",
+        "resendPhoneOTP",
+        "firebaseSignOut",
+        "onAuthChange",
+        "getCurrentUser"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [
+        {
+          "method": "RecaptchaVerifier",
+          "line": 18
+        },
+        {
+          "method": "signInWithPhoneNumber",
+          "line": 37
+        },
+        {
+          "method": "signOut",
+          "line": 80
+        },
+        {
+          "method": "onAuthStateChanged",
+          "line": 92
+        }
+      ],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Firebase Services"
+    },
+    {
+      "file": "src/services/utils/errorHandler.js",
+      "ext": ".js",
+      "totalLines": 79,
+      "loc": 62,
+      "functions": 4,
+      "functionNames": [
+        "getFirebaseError",
+        "getErrorMessage",
+        "handleAsyncError",
+        "getValidationError"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "getFirebaseError",
+        "getErrorMessage",
+        "handleAsyncError",
+        "getValidationError"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Service Utilities"
+    },
+    {
+      "file": "src/store/authStore.js",
+      "ext": ".js",
+      "totalLines": 75,
+      "loc": 67,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "zustand",
+        "zustand/middleware"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": true
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "State (Zustand)"
+    },
+    {
+      "file": "src/utils/formatters.js",
+      "ext": ".js",
+      "totalLines": 136,
+      "loc": 113,
+      "functions": 14,
+      "functionNames": [
+        "formatMobile",
+        "maskMobile",
+        "formatDate",
+        "formatDateTime",
+        "formatForAPI",
+        "timeAgo",
+        "formatCurrency",
+        "formatNumber",
+        "formatDistance",
+        "formatFileSize",
+        "formatFullName",
+        "getInitials",
+        "capitalize",
+        "titleCase"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "formatMobile",
+        "maskMobile",
+        "formatDate",
+        "formatDateTime",
+        "formatForAPI",
+        "timeAgo",
+        "formatCurrency",
+        "formatNumber",
+        "formatDistance",
+        "formatFileSize",
+        "formatFullName",
+        "getInitials",
+        "capitalize",
+        "titleCase"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Utilities"
+    },
+    {
+      "file": "src/utils/validators.js",
+      "ext": ".js",
+      "totalLines": 62,
+      "loc": 49,
+      "functions": 5,
+      "functionNames": [
+        "validateMobile",
+        "validateOTP",
+        "validateFirstName",
+        "validateLastName",
+        "validateForm"
+      ],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "validateMobile",
+        "validateOTP",
+        "validateFirstName",
+        "validateLastName",
+        "validateForm"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Utilities"
+    },
+    {
+      "file": "tailwind.config.js",
+      "ext": ".js",
+      "totalLines": 7,
+      "loc": 5,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    },
+    {
+      "file": "vite.config.js",
+      "ext": ".js",
+      "totalLines": 24,
+      "loc": 22,
+      "functions": 0,
+      "functionNames": [],
+      "components": 0,
+      "componentNames": [],
+      "hooksUsed": [],
+      "localImports": [],
+      "npmImports": [
+        "vite",
+        "@vitejs/plugin-react",
+        "path"
+      ],
+      "exports": [
+        "default"
+      ],
+      "apiCalls": [],
+      "firebaseCalls": [],
+      "hardcodedURLs": [
+        "http://3.109.253.115"
+      ],
+      "styling": {
+        "tailwindBlocks": 0,
+        "tailwindSamples": [],
+        "inlineStyles": 0,
+        "cssImports": 0,
+        "cssVarsUsed": []
+      },
+      "fonts": [],
+      "routerUsage": [],
+      "statePatterns": {
+        "useState": false,
+        "useReducer": false,
+        "useEffect": false,
+        "useMemo": false,
+        "useCallback": false,
+        "useRef": false,
+        "useContext": false,
+        "createContext": false,
+        "zustand": false
+      },
+      "issues": {
+        "consoleLogs": 0,
+        "todos": 0
+      },
+      "module": "Other"
+    }
+  ]
+}
